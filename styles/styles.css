@@ -1,0 +1,977 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.container {
+    max-width: 1440px;
+    margin: 0 auto; }
+
+nav{
+    width: 100%;
+    height: 120px;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+.nav-logo{
+    width: 30%;
+    height: 50px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    max-width: 1440px;
+    margin: 0 auto;
+}
+
+.nav-logo img{
+    width: 234px;
+    height: 50px;
+}
+
+.nav-content{
+    width: 50%;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.nav-content ul {
+        display: flex;
+        gap: 40px; /* აქ გავზარდე დაშორება, რომ მენიუ სწორად განლაგდეს */
+        list-style: none;
+        padding: 0;
+        margin: 0;
+        align-items: center;
+}
+.nav-content ul li {
+    white-space: nowrap; /* ტექსტი არ გადავიდეს ახალ ხაზზე */
+}
+
+.nav-content a{
+    font-size: 14px;
+    color: black;
+    font-family: "Poppins", sans-serif;
+    font-weight: 700;
+    text-decoration: none;
+    padding: 10px 20px; 
+    transition: all 0.3s ease-in-out;
+    border-radius: 40px; 
+    display: inline-block;
+}
+
+/* კონტაქტის ღილაკის სტილი ჰედერში */
+
+.contact-btn{
+    width: 143px;
+    height: 35px;
+    cursor: pointer;
+    border-radius: 40px;
+    border: none;
+    outline: none;
+    background: none;
+}
+
+.nav-content a:hover {
+    background-color: rgba(76, 224, 215, 1);
+    color: #262626;
+    transform: scale(1.05); /* ოდნავ გადიდება */
+    transition: all 0.3s ease-in-out; }
+
+/* სერჩ ღილაკის სტილები */
+
+.nav-search{
+    width: 5%;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+.nav-search button{
+    width: 47px;
+    height: 47px;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    border-radius: 50%;
+    background-color:  rgba(76, 224, 215, 1);
+}
+
+    /* სამართავი სერჩის */
+
+.nav-search {
+    position: relative; 
+    display: flex;
+    align-items: center;
+}
+#search-box {
+    position: absolute;
+    right: 50px; 
+    top: 50%;
+    transform: translateY(-50%);
+    width: 0px; 
+    overflow: hidden;
+    background: white;
+    padding: 5px 10px;
+    border-radius: 20px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+    transition: width 0.4s ease-in-out, opacity 0.3s ease-in-out;
+    opacity: 0;
+    display: flex;
+    align-items: center;
+    z-index: 1;
+}
+
+/* საძიებო ველის input */
+#search-box input {
+    width: 180px;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 15px;
+    outline: none;
+    font-size: 14px;
+}
+
+/* როცა გამოჩნდება */
+#search-box.active {
+    width: 200px;
+    opacity: 1; }
+
+    #search-button {
+        position: relative;
+        z-index: 2; 
+        background-color: rgba(76, 224, 215, 1);
+        border: none;
+        border-radius: 50%;
+        width: 40px;
+        height: 40px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        cursor: pointer;
+        transition: all 0.3s ease-in-out;
+    }
+
+/* nav enc */
+
+/* section 1 */
+
+section{
+    width: 1372px;
+    height: 649px;
+    background-image: url(https://s3-alpha-sig.figma.com/img/1bee/a1ef/0b5a8175f2b1b04184e84b4b4a68a3fa?Expires=1740355200&Key-Pair-Id=APKAQ4GOSFWCW27IBOMQ&Signature=imjMuC0cBcteo9EDsnoQBBE6t4zGFK6m8T~ENUDnNsScYY7Bqwf2jNMjbQMiX1bvYi1FWWDrpB227kdqJWinCE84mIeWeHSe36~vw-jC6ZYeVkgAzA1OSSNmupd582h1MsBD0vCZ8Mxi1kFKrzKiC8TCwuFnhFYugbQlvCIHRhRCh2UbupCib9PyGBW4ZOjYkCzTTpkaU5G2o1U0u0eqJpnC9qWV2wnnX378Fg2deMpr3RLx0nhwcZAs9aSzoi~SrqbVLAyRkF2rzAeZtjZ1Tql5OWJ9FaLBJUgT1lPfPBNokWEFHk~ihQtt69Sjh6BSIrXMg6CvsHc7slptgYwfQA__);
+    background-position: center top ;
+    object-fit: cover;
+    background-size: cover;
+    background-repeat: no-repeat;
+    margin: auto;
+    border-radius: 40px;
+
+}
+.main1 {
+    width: 100%;
+    height: 649px;
+    display: flex;
+    justify-content: flex-start;
+    background-color: rgba(0, 0, 0, 0.175);
+    border-radius: 40px;
+}
+
+.main1-txt1{
+    width: 700px;
+    height: 500px;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: start;
+    text-align: start;
+    position: relative;
+    left: 70px;
+    top: 90px;
+}
+.main1-txt1 h5{
+    color: white;
+    font-family: "Poppins", sans-serif;
+    font-size: 12px;
+    font-weight: 700;
+}
+.main1-txt1 h1{
+    font-size: 49px;
+    color: white;
+    font-family: "Poppins", sans-serif;
+    font-weight: 400;
+}
+
+.main1-txt1 span{
+    background: linear-gradient(90deg, #4CE0D7 43.06%, #8BA9F4 100%);
+    background-clip: text;  
+    -webkit-text-fill-color: transparent;
+    font-weight: 700;
+}
+
+.main1-txt1 p{
+    font-size: 20px;
+    color: white;
+    font-family: "Poppins", sans-serif;
+    font-weight: 400;
+}
+/* მეორე სექცია */
+
+.section2{
+    width: 100%;
+    height: 540px;
+    display: flex;
+    flex-direction: column;
+    background: none;
+    margin-top: 50px;
+   
+
+}
+.satauri1{
+    width: 330px;
+    height: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: end;
+    position: relative;
+    top: 20px;
+}
+
+.satauri1 h1{
+    font-size: 32px;
+    color: black;
+    font-weight: 700px;
+    font-family: "Poppins", sans-serif;
+}
+.cards1{
+    width: 1272px;
+    height: 540px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: auto;
+    gap: 15px;
+    border-bottom: solid gray 2px;
+
+}
+
+.n1{
+    width: 204px;
+    height: 291px;
+    border-radius: 20px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+    transition: all 0.3s ease-in-out;
+}
+.n1 span{
+    color: black;
+    font-size: 20px;
+    font-family: "Poppins", sans-serif;
+    font-weight: 700;
+
+}
+.n1 button{
+    width: 143px;
+    height: 35px;
+    border: none;
+    outline: none;
+    color: black;
+    font-size: 12px;
+    font-family: "Poppins", sans-serif;
+    font-weight: 700;
+    border-radius: 40px;
+    background-color: rgba(76, 224, 215, 1);
+    cursor: pointer;
+}
+
+/* sec2 ჰოვერის სტილი */
+.n1:hover {
+    transform: scale(1.05); 
+    box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.15); 
+    transition: all 0.3s ease-in-out; }
+
+/* end */
+
+/* სექცია 3 */
+
+.section3{
+    width: 1204px;
+    height: 698px;
+    display: flex;
+    flex-direction: column;
+    border-radius: 20px;
+    margin: auto;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    position: relative;
+    top: 80px;
+
+}
+
+.section3-img{
+    width: 100%;
+    height: 360px;
+    background-image: url(../images/section3.png);
+    background-position: center;
+    background-size: cover;
+    object-fit: cover;
+    background-repeat: no-repeat;
+    border-radius: 20px;
+}
+
+.sec3-fashion{
+    width: 233px;
+    height: 36px;
+    border-radius: 20px;
+    border: none;
+    outline: none;
+    background: rgba(38, 38, 38, 1);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    left: 40px;
+    top: 20px;
+}
+
+.sec3-fashion span{
+    color: rgba(255, 255, 255, 1);
+    font-family: "Poppins",sans-serif;
+    font-size: 12px;
+    font-weight: 700;
+}
+
+.sec3-satauri{
+    width: 100%;
+    height: 100px;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+
+}
+.sec3-n1{
+    width: 30%;
+    height: 90px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+
+.sec3-satauri span{
+    color: gray;
+    font-family: "Poppins", sans-serif;
+    font-weight: 400;
+    font-size: 14px;
+}
+
+.sec3-satauri h3{
+    color: rgba(242, 94, 94, 1);
+    font-family: "Poppins", sans-serif;
+    font-weight: 700;
+    font-size: 14px;
+}
+.sec3-n2{
+    width: 30%;
+    height: 90px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.sec3-n3{
+    width: 40%;
+    height: 90px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.sec3-txt{
+    width: 100%;
+    height: 300px;
+    padding-left: 105px;
+    padding-top: 40px;
+}
+.sec3-txt h1{
+    font-size: 26px;
+    font-family: "Poppins", sans-serif;
+    font-weight: 700px;
+}
+
+.sec3-txt p{
+    font-size: 16px;
+    font-family: "Poppins", sans-serif;
+    font-weight: 400px;
+    color: black;
+}
+
+.sec3-txt span{
+    font-size: 12px;
+    color: rgba(76, 224, 215, 1);
+    font-family: "Poppins", sans-serif;
+    font-weight: 700;
+}
+/* end */
+
+/* სექცია 4 */
+
+.section4{
+    width: 100%;
+    height: 850px;
+    display: flex;
+    flex-direction: column;
+    margin-top: 130px;
+
+}
+
+.card1{
+    width: 100%;
+    height: 780px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+    flex-wrap: wrap;
+}
+
+.left{
+    width: 579px;
+    height: 630px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    border-radius: 20px;
+}
+.left-img{
+    width: 100%;
+    height: 278px;
+    background-image: url(../images/left-img.png);
+    background-position: center;
+    object-fit: cover;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+.sec4-satauri{
+    width: 100%;
+    height: 100px;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+
+}
+.sec4-n1{
+    width: 50%;
+    height: 90px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 10px;
+    padding-left: 30px;
+}
+
+.sec4-satauri span{
+    color: gray;
+    font-family: "Poppins", sans-serif;
+    font-weight: 400;
+    font-size: 14px;
+}
+
+.sec4-satauri h3{
+    color: rgba(242, 94, 94, 1);
+    font-family: "Poppins", sans-serif;
+    font-weight: 700;
+    font-size: 14px;
+}
+.sec4-n2{
+    width: 50%;
+    height: 90px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.left-txt{
+    width: 100%;
+    height: auto;
+    padding-left: 30px;
+}
+.left-txt h1{
+    font-size: 26px;
+    color: black;
+    font-family: "Poppins", sans-serif;
+    font-weight: 700;
+}
+.left-txt p{
+    font-size: 16px;
+    color: black;
+    font-family: "Poppins", sans-serif;
+    font-weight: 400;
+}
+.left-txt span{
+    font-size: 12px;
+    color: rgba(139, 169, 244, 1);
+    font-family: "Poppins", sans-serif;
+    font-weight: 700;
+}
+.right{
+    width: 579px;
+    height: 630px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    border-radius: 20px;
+}
+.right-img{
+    width: 100%;
+    height: 278px;
+    background-image: url(../images/right-img.png);
+    background-position: center;
+    object-fit: cover;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+.satauri2{
+    width: 330px;
+    height: 100px;
+    display: flex;
+    justify-content: flex-end;
+    align-items: end;
+    padding-right: 20px;
+}
+
+.satauri2 h1{
+    font-size: 32px;
+    color: black;
+    font-weight: 700px;
+    font-family: "Poppins", sans-serif;
+}
+.sec4-fashion{
+    width: 175px;
+    height: 36px;
+    border-radius: 20px;
+    border: none;
+    outline: none;
+    background: rgba(38, 38, 38, 1);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    left: 40px;
+    top: 20px;
+}
+
+.sec4-fashion span{
+    color: rgba(255, 255, 255, 1);
+    font-family: "Poppins",sans-serif;
+    font-size: 12px;
+    font-weight: 700;
+}
+/* end */
+
+/* სექცია 5 */
+
+.section5{
+    width: 100%;
+    height: 1300px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 50px;
+}
+
+.info1{
+    width: 1204px;
+    height: 368px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    border-radius: 20px;
+    display: flex;
+}
+.info1-left{
+    width: 50%;
+    height: 368px;
+    background-image: url(../images/info1.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    object-fit: cover;
+    border-radius: 20px;
+}
+.info1-right{
+    width: 50%;
+    height: 368px;
+}
+.sec5-satauri{
+    width: 100%;
+    height: 100px;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+
+}
+.sec5-n1{
+    width: 50%;
+    height: 90px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 10px;
+    padding-left: 30px;
+}
+
+.sec5-satauri span{
+    color: gray;
+    font-family: "Poppins", sans-serif;
+    font-weight: 400;
+    font-size: 14px;
+}
+
+.sec5-satauri h3{
+    color: rgba(242, 94, 94, 1);
+    font-family: "Poppins", sans-serif;
+    font-weight: 700;
+    font-size: 14px;
+}
+.sec5-n2{
+    width: 50%;
+    height: 90px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.rightinfo-txt{
+    width: 100%;
+    height: auto;
+    padding-left: 30px;
+}
+.rightinfo-txt h1{
+    font-size: 26px;
+    color: black;
+    font-family: "Poppins", sans-serif;
+    font-weight: 700;
+}
+.rightinfo-txt p{
+    font-size: 16px;
+    color: black;
+    font-family: "Poppins", sans-serif;
+    font-weight: 400;
+}
+.rightinfo-txt span{
+    font-size: 12px;
+    color: rgba(139, 169, 244, 1);
+    font-family: "Poppins", sans-serif;
+    font-weight: 700;
+}
+.info2-left{
+    width: 50%;
+    height: 368px;
+    background-image: url(../images/info2.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    object-fit: cover;
+    border-radius: 20px;
+}
+.info3-left{
+    width: 50%;
+    height: 368px;
+    background-image: url(../images/info3.png);
+    background-position: center top;
+    background-repeat: no-repeat;
+    background-size: cover;
+    object-fit: cover;
+    border-radius: 20px;
+}
+
+footer{
+    width: 100%;
+    height: 308px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.211);
+    border-radius: 40px 40px 0 0;
+
+    
+}
+.foot1{
+    width: 1400px;
+    height: 210px;
+    border-bottom: solid  gray 2px;
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.foot-logo{
+    width: 40%;
+    height: 180px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.foot-content{
+    width: 60%;
+    height: 180px;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;;
+}
+
+.foot-social{
+    width: 80%;
+    height: 190px;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    gap: 20px;
+}
+
+.foot-social h1{
+    font-size: 26px;
+    font-family: "Poppins", sans-serif;
+    font-weight: 700;
+    color: black;
+}
+
+.foot2{
+    width: 1400px;
+    height: 98px;
+    display: flex;
+    align-items: center;
+}
+.foot2 p{
+    font-size: 14px;
+    color: black;
+    font-family: "Poppins", sans-serif;
+    font-weight: 700;
+}
+
+/* სერჩი */
+#search-box {
+    position: absolute;
+    top: 50%;
+    right: 60px; 
+    transform: translateY(-50%);
+    width: 0px; 
+    overflow: hidden;
+    background: white;
+    padding: 5px 10px;
+    border-radius: 20px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+    transition: width 0.4s ease-in-out, opacity 0.3s ease-in-out;
+    opacity: 0;
+}
+#search-box input {
+    width: 180px;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 15px;
+    outline: none;
+    font-size: 14px;
+}
+
+/* სერჩის ველი */
+#search-box.active {
+    width: 200px;
+    opacity: 1;
+}
+
+
+.nav-search {
+    position: relative; 
+    display: flex;
+    align-items: center;
+}
+
+
+
+/* Reed more სტილი */
+.sec3-txt span,
+.left-txt span,
+.rightinfo-txt span {
+    font-size: 12px;
+    color: rgba(76, 224, 215, 1);
+    font-family: "Poppins", sans-serif;
+    font-weight: 700;
+    cursor: pointer; 
+    transition: all 0.3s ease-in-out; }
+
+
+/* ჰოვერის ეფექტი */
+.sec3-txt span:hover,
+.left-txt span:hover,
+.rightinfo-txt span:hover {
+    color: rgba(38, 170, 160, 1); 
+    transform: translateX(3px); 
+}
+
+/* ბურგერ მენიუ */
+
+nav {
+    width: 100%;
+    height: 100px; 
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 50px; 
+}
+
+
+.nav-logo {
+    flex: 1;
+    display: flex;
+    justify-content: flex-start;
+}
+
+
+.nav-content {
+    flex: 2;
+    display: flex;
+    justify-content: center;
+}
+
+
+.nav-actions {
+    flex: 1;
+    display: flex;
+    justify-content: flex-end;
+    gap: 15px; 
+}
+
+
+.nav-content ul {
+    display: flex;
+    gap: 40px; 
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    align-items: center;
+}
+
+/* ბურგერ მენიუ ნაგულისხმევად დამალულია */
+@media screen and (max-width: 1024px) {
+    .nav-content {
+        display: none; 
+        position: absolute;
+        top: 100px; 
+        right: 0;
+        width: 220px;
+        height: auto;
+        background: #4ce0d7; 
+        flex-direction: column;
+        text-align: left;
+        padding: 15px;
+        border-radius: 10px;
+        box-shadow: 0 5px 10px rgba(0, 0, 0, 0.4);
+        transition: 0.3s ease-in-out;
+        z-index: 999;
+    }
+
+    /* როცა ბურგერ მენიუ აქტიურია */
+    .nav-content.active {
+        display: flex;
+    }
+
+    .nav-content ul {
+        flex-direction: column;
+        gap: 10px;
+        list-style: none;
+        padding: 0;
+        margin: 0;
+    }
+
+    .nav-content ul li {
+        padding: 10px;
+        text-align: center;
+    }
+
+    .nav-content a {
+        color: #262626; 
+        text-decoration: none;
+        font-size: 16px;
+        font-weight: bold;
+        display: block;
+        padding: 10px;
+        border-radius: 5px;
+        transition: background 0.3s ease-in-out;
+    }
+
+    .nav-content a:hover {
+        background-color: rgba(255, 255, 255, 0.2);
+    }
+}
+@media screen and (min-width: 1025px) {
+    .hamburger-menu {
+        display: none !important;
+    }
+}
+
+.nav-actions {
+    display: flex;
+    align-items: center;
+    gap: 20px; 
+}
+
+
+.hamburger-menu {
+    margin-left: 10px; 
+}
+
+
+/* მედია მობილური - პლანშეტი */
+
+/* ----------------- 📱 1024px და ქვევით (პლანშეტები) ----------------- */
+@media screen and (max-width:1024px) {
+    .section2 {
+        width: 100%;
+        height: auto;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .cards1 {
+        width: 100%;
+        height: auto;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 20px;
+    }
+
+    .n1 {
+        width: 45%; /* ორ სვეტად გადანაწილდება */
+    }
+
+    .section3 {
+        width: 90%;
+        padding: 20px;
+    }
+
+    .section4 {
+        width: 100%;
+        height: auto;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .card1 {
+        width: 100%;
+        height: auto;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 20px;
+    }
+
+    .left, .right {
+        width: 90%;
+        height: auto;
+    }
+}
+
