@@ -2,6 +2,11 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+
+
+    /* <!-- ნინო - > ბრენჩის სახელი ჰეადერი და 1 სექცია   --> */
+
+
 }
 .container {
     max-width: 1440px;
@@ -64,8 +69,6 @@ nav{
 /* კონტაქტის ღილაკის სტილი ჰედერში */
 
 .contact-btn{
-    width: 143px;
-    height: 35px;
     cursor: pointer;
     border-radius: 40px;
     border: none;
@@ -218,6 +221,15 @@ section{
     font-family: "Poppins", sans-serif;
     font-weight: 400;
 }
+
+
+   /* <!-- ნინო - > ბრენჩის სახელი "ჰეადერი და 1 სექცია"   --> */
+
+
+
+
+   /* <!-- ნიკუშა -> ბრენჩის სახელი 2 სექცია   --> */
+
 /* მეორე სექცია */
 
 .section2{
@@ -298,6 +310,13 @@ section{
     transition: all 0.3s ease-in-out; }
 
 /* end */
+
+
+
+/* <!-- ნიკუშა -> ბრენჩის სახელი 2 სექცია   --> */
+
+
+/* <!-- ანი =>> ბრენჩის სახელი  3 სექცია  =>> --> */
 
 /* სექცია 3 */
 
@@ -420,6 +439,15 @@ section{
 }
 /* end */
 
+
+/* <!-- ანი =>> ბრენჩის სახელი  3 სექცია  =>> --> */
+
+
+
+
+
+/* <!-- ნატალი =>> ბრენჩის სახელი 4 სექცია  --> */
+
 /* სექცია 4 */
 
 .section4{
@@ -437,7 +465,7 @@ section{
     display: flex;
     justify-content: center;
     align-items: center;
-    gap: 30px;
+    gap: 60px;
     flex-wrap: wrap;
 }
 
@@ -570,6 +598,9 @@ section{
 }
 /* end */
 
+
+/* <!-- ნატალი =>> ბრენჩის სახელი 4 სექცია  --> */
+
 /* სექცია 5 */
 
 .section5{
@@ -608,8 +639,15 @@ section{
     display: flex;
     justify-content: space-evenly;
     align-items: center;
+    transition: all 0.3s ease-in-out;
 
 }
+
+.foot-content a:hover {
+    transform: scale(1.05); 
+    box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.15); 
+    transition: all 0.3s ease-in-out; }
+    
 .sec5-n1{
     width: 50%;
     height: 90px;
@@ -808,89 +846,194 @@ footer{
     transform: translateX(3px); 
 }
 
+/* ბურგერ მენიუ */
+
+nav {
+    width: 100%;
+    height: 100px; 
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 50px; 
+}
+
+
+.nav-logo {
+    flex: 1;
+    display: flex;
+    justify-content: flex-start;
+}
+
+
+.nav-content {
+    flex: 2;
+    display: flex;
+    justify-content: center;
+}
+
+
+.nav-actions {
+    flex: 1;
+    display: flex;
+    justify-content: flex-end;
+    gap: 15px; 
+}
+
+
+.nav-content ul {
+    display: flex;
+    gap: 40px; 
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    align-items: center;
+}
+
+/* ღილაკების ჰოვერები  */
+
+.sec3-fashion {
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+}
+
+.sec3-fashion:hover span {
+    color: rgba(76, 224, 215, 1); 
+    transform: scale(1.1);
+}
+
+.sec4-fashion {
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+}
+
+.sec4-fashion:hover span {
+    color: rgba(76, 224, 215, 1); 
+    transform: scale(1.1);
+    
+}
+
+/* ბურგერ მენიუ ნაგულისხმევად დამალულია */
+@media screen and (max-width: 1024px) {
+    .nav-content {
+        display: none; 
+        position: absolute;
+        top: 100px; 
+        right: 0;
+        width: 220px;
+        height: auto;
+        background: #4ce0d7;
+        background: rgba(76, 224, 215, 0.5);
+        flex-direction: column;
+        text-align: left;
+        padding: 15px;
+        border-radius: 10px;
+        box-shadow: 0 5px 10px rgba(0, 0, 0, 0.4);
+        transition: 0.3s ease-in-out;
+        z-index: 999;
+    }
+
+    /* როცა ბურგერ მენიუ აქტიურია */
+    .nav-content.active {
+        display: flex;
+    }
+
+    .nav-content ul {
+        flex-direction: column;
+        gap: 10px;
+        list-style: none;
+        padding: 0;
+        margin: 0;
+    }
+
+    .nav-content ul li {
+        padding: 10px;
+        text-align: center;
+    }
+
+    .nav-content a {
+        color: #262626; 
+        text-decoration: none;
+        font-size: 16px;
+        font-weight: bold;
+        display: block;
+        padding: 10px;
+        border-radius: 5px;
+        transition: background 0.3s ease-in-out;
+    }
+
+    .nav-content a:hover {
+        background-color: rgba(255, 255, 255, 0.2);
+    }
+}
+@media screen and (min-width: 1025px) {
+    .hamburger-menu {
+        display: none !important;
+    }
+}
+
+.nav-actions {
+    display: flex;
+    align-items: center;
+    gap: 20px; 
+}
+
+
+.hamburger-menu {
+    margin-left: 10px; 
+}
+
 
 /* მედია მობილური - პლანშეტი */
 
 /* ----------------- 📱 1024px და ქვევით (პლანშეტები) ----------------- */
-@media screen and (max-width: 1024px) {
-    .nav-container {
-        flex-direction: column;
-        align-items: center;
+@media screen and (max-width:1024px) {
+    .section2 {
+        width: 100%;
         height: auto;
-        padding: 10px 0;
-        text-align: center;
-    }
-
-    .nav-content ul {
         display: flex;
         flex-direction: column;
         align-items: center;
-        gap: 10px;
-    }
-
-    .nav-search {
-        margin-top: 10px;
         justify-content: center;
     }
 
     .cards1 {
+        width: 100%;
+        height: auto;
         display: flex;
         flex-wrap: wrap;
         justify-content: center;
-        width: 100%;
+        gap: 20px;
     }
 
-    .card {
-        width: 45%;
-        margin: 10px auto;
-        text-align: center;
+    .n1 {
+        width: 45%; /* ორ სვეტად გადანაწილდება */
     }
 
     .section3 {
-        width: 95%;
-        padding: 0 10px;
-        margin: auto;
+        width: 90%;
+        padding: 20px;
     }
 
-    .info1 {
-        width: 95%;
-        flex-direction: column;
+    .section4 {
+        width: 100%;
         height: auto;
-        text-align: center;
+        display: flex;
+        flex-direction: column;
         align-items: center;
     }
 
-    .info1-left,
-    .info2-left,
-    .info3-left {
+    .card1 {
         width: 100%;
-        height: 200px;
-        background-size: cover;
-        background-position: center;
+        height: auto;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 20px;
     }
 
-    .info1-right {
-        width: 100%;
-        padding: 20px;
-    }
-}
-
-/* ----------------- 📱 768px და ქვევით (მობილური მოწყობილობები) ----------------- */
-@media (max-width: 1024px) {
-    .nav-content ul {
-        flex-direction: column;
-        text-align: center;
-    }
-    .trending-container {
-        flex-direction: column;
-    }
     .left, .right {
-        width: 100%;
+        width: 90%;
+        height: auto;
     }
 }
 
-@media (max-width: 768px) {
-    .cards1 {
-        flex-direction: column;
-    }
-}
